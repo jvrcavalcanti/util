@@ -1,0 +1,24 @@
+{
+    "name": "accolon/util-base64",
+    "description": "Multi packeages",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Accolon\\Util\\Base64": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "jvrcavalcanti",
+            "email": "jonnyvictor01@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "suggest": {},
+    "config": {
+        "sort-packages": true
+    }
+}

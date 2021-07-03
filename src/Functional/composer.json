@@ -1,0 +1,24 @@
+{
+    "name": "accolon/util-functional",
+    "description": "Multi packeages",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Accolon\\Util\\Functional": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "jvrcavalcanti",
+            "email": "jonnyvictor01@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "suggest": {},
+    "config": {
+        "sort-packages": true
+    }
+}

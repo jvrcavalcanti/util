@@ -1,0 +1,43 @@
+{
+    "name": "accolon/util",
+    "description": "Multi packeages",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "src/Buffer/helpers.php",
+            "src/Base64/helpers.php",
+            "src/Functional/helpers.php"
+        ],
+        "psr-4": {
+            "Accolon\\Util\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Accolon\\Util\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jvrcavalcanti",
+            "email": "jonnyvictor01@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.8"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "suggest": {},
+    "config": {
+        "sort-packages": true
+    },
+    "replace": {
+        "accolon-util/buffer": "self.version",
+        "accolon-util/base64": "self.version"
+    }
+}
