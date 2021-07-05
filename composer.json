@@ -37,7 +37,8 @@
         "sort-packages": true
     },
     "replace": {
-        "accolon-util/buffer": "self.version",
-        "accolon-util/base64": "self.version"
+        "accolon/util-buffer": "self.version",
+        "accolon/util-base64": "self.version",
+        "accolon/util-functional": "self.version"
     }
 }
