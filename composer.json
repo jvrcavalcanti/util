@@ -40,5 +40,8 @@
         "accolon/util-buffer": "self.version",
         "accolon/util-base64": "self.version",
         "accolon/util-functional": "self.version"
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest ."
     }
 }
