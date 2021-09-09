@@ -36,7 +36,7 @@ class Collection
 
         foreach ($this->data as $key => $value) {
             if ($action($value, $key, array_clone((array) $this->data))) {
-                $new[$key] = $value;
+                $new[] = $value;
             }
         }
 
@@ -45,17 +45,48 @@ class Collection
         return $this;
     }
 
-    public function reduce(mixed $initial, array|string|callable $action): mixed
+    public function reduce(array|string|callable $action, mixed $initial = null): mixed
     {
         $action = $this->resolveAction($action);
 
         $carry = $initial;
 
-        foreach ($initial as $key => $value) {
+        foreach ($this->data as $key => $value) {
             $carry = $action($carry, $value, $key);
         }
 
         return $carry;
+    }
+
+    public function contains(array|string|callable $action): bool
+    {
+        $action = $this->resolveAction($action);
+
+        foreach ($this->data as $key => $value) {
+            if ($action($value, $key, array_clone((array) $this->data))) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public function find(array|string|callable $action): mixed
+    {
+        $action = $this->resolveAction($action);
+
+        foreach ($this->data as $key => $value) {
+            if ($action($value, $key, array_clone((array) $this->data))) {
+                return $value;
+            }
+        }
+
+        return null;
+    }
+
+    public function all(): array
+    {
+        return $this->toArray();
     }
 
     public function toArray(): array

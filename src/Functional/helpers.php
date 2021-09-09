@@ -33,3 +33,17 @@ if (!function_exists('map')) {
         return collection($arr)->map($action)->toArray();
     }
 }
+
+if (!function_exists('filter')) {
+    function filter(array $arr, array|string|callable $action): array
+    {
+        return collection($arr)->filter($action)->toArray();
+    }
+}
+
+if (!function_exists('reduce')) {
+    function reduce(array $arr, array|string|callable $action, mixed $initial = null): mixed
+    {
+        return collection($arr)->reduce($action);
+    }
+}
